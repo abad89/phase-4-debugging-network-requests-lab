@@ -64,10 +64,14 @@ developing your own process.
 
   - How I debugged:
 
+  Clicked add toy, saw error in server console "uninitialized constant Toys on line 10", changed Toys.create to Toy.create in toys_controller.rb
+
 - Update the number of likes for a toy
 
   - How I debugged:
+  Clicked like, saw "unexpected end of json" in console, added render json to ToysController.update
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+  Clicked donate to goodwill, checked network console tab, previewed response, saw "no route matches delete 'toys/2'", checked routes .rb, added ":destroy" to resource array
